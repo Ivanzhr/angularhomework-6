@@ -1,0 +1,25 @@
+.films{
+    form {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        input, select, button {
+            padding: 8px;
+        }
+    }
+
+    .film {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .film_description {
+            width: 50%;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

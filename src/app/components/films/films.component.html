@@ -1,0 +1,24 @@
+<div class="films">
+    <form (ngSubmit)="onSubmit()" class="films_search">
+        <input class="search_title" type="text" name="searchTitle" [(ngModel)]="searchTitle" placeholder="Enter the title">
+        <input class="search_Year" type="text" name="searchYear" [(ngModel)]="searchYear" placeholder="Enter the year">
+        <select class="search_type" name="searchPlot" [(ngModel)]="searchPlot">
+            <option value="Short" selected>Short</option>
+            <option value="Full">Full</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+    <div class="film" *ngIf="films">
+            <div class="fiml_poster">
+                <img src="{{films.Poster}}" alt="">
+            </div>
+            <div class="film_description">
+                <p>{{films.Year}}</p>
+                <p>{{films.Ratings[0].Value}}</p>
+                <p>{{films.Runtime}}</p>
+                <p>{{films.Writer}}</p>
+                <p>{{films.Actors}}</p>
+                <p>{{films.Plot}}</p>
+            </div>
+    </div>
+</div>
